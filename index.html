@@ -44,7 +44,7 @@
                 <span class="text-blue-500 group-hover:scale-150 group-hover:rotate-12 transition-transform inline-block">.</span>
             </a>
 
-            <!-- BOUTONS CENTRAUX - Liens mis à jour avec tes vrais noms de fichiers -->
+            <!-- BOUTONS CENTRAUX -->
             <div class="flex flex-wrap items-center justify-center gap-2">
                 <a href="projet.html" class="px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all hover:scale-105">
                     PROJETS
@@ -71,7 +71,8 @@
 
     <!-- En-tête -->
     <header class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
-        <div class="text-center max-w-5xl overflow-hidden">
+        <!-- Correction appliquée ici : retrait de overflow-hidden pour que les boutons respirent -->
+        <div class="text-center max-w-5xl px-4 py-4">
             
             <div class="slide-right delay-1 inline-block mb-4 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide">
                 Disponible pour échanger
@@ -85,7 +86,7 @@
                 23 ans | Support Clients chez <strong class="text-white hover:text-blue-400 transition-colors">Vidal France</strong>
             </p>
 
-            <div class="slide-right delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div class="slide-right delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center pb-6">
                 <a href="#profil" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-950 hover:bg-blue-50 rounded-full font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
                     Découvrir mon profil
                 </a>
@@ -254,7 +255,6 @@
                 </h3>
                 
                 <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-                    <!-- LE LIEN DU CV ENCODÉ POUR TON FICHIER EXACT -->
                     <a href="CV%20JNEID%20Samy.pdf" target="_blank" class="text-sm text-blue-400 hover:text-blue-300 font-semibold underline">
                         Ouvrir en plein écran
                     </a>
@@ -266,7 +266,6 @@
             </div>
             
             <div class="flex-1 w-full bg-slate-100">
-                <!-- LE LIEN DU CV ENCODÉ POUR TON FICHIER EXACT -->
                 <iframe src="CV%20JNEID%20Samy.pdf" class="w-full h-full border-0"></iframe>
             </div>
         </div>
