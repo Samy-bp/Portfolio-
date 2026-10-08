@@ -6,27 +6,21 @@
     <title>Samy Jneid | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animation d'apparition/glissement depuis la droite */
         .slide-right {
             opacity: 0;
             transform: translateX(60px);
             animation: slideInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Décalages temporels pour rendre l'animation séquentielle */
         .delay-1 { animation-delay: 0.15s; }
         .delay-2 { animation-delay: 0.3s; }
         .delay-3 { animation-delay: 0.45s; }
         .delay-4 { animation-delay: 0.6s; }
 
         @keyframes slideInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            to { opacity: 1; transform: translateX(0); }
         }
 
-        /* Animations au défilement */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -37,7 +31,6 @@
             transform: translateY(0);
         }
 
-        /* Cartes effet verre */
         .glass-card {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(10px);
@@ -47,60 +40,48 @@
 </head>
 <body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-blue-500 selection:text-white overflow-x-hidden">
 
-    <!-- Fond décoratif avec des halos de lumière -->
+    <!-- Fond décoratif -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-900/20 blur-[120px]"></div>
     </div>
 
-    <!-- Navigation fluide et corrigée -->
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-950/85 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex flex-wrap justify-between items-center gap-y-3">
             
-            <!-- Logo "SAMY." avec effet de survol dynamique -->
             <a href="index.html" class="group relative inline-flex items-center text-2xl font-black text-white tracking-tighter transition-transform duration-300 hover:scale-105">
                 <span class="transition-colors duration-300 group-hover:text-blue-400">SAMY</span>
                 <span class="text-blue-500 transition-all duration-300 group-hover:scale-150 group-hover:rotate-12 inline-block">.</span>
-                <!-- Lueur au survol du logo -->
                 <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
 
-            <!-- BOUTONS CENTRAUX (Bien espacés, pas de scroll) -->
             <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-                <!-- PROJETS -->
                 <a href="projets.html" class="px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 border border-blue-400/30">
                     PROJETS
                 </a>
-
-                <!-- CERTIFICATIONS -->
                 <a href="certifications.html" class="px-4 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs sm:text-sm border border-slate-700/80 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:border-blue-500/50">
                     CERTIFICATIONS
                 </a>
-
-                <!-- EXPERIENCES -->
                 <a href="experiences.html" class="px-4 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs sm:text-sm border border-slate-700/80 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:border-blue-500/50">
                     EXPÉRIENCES
                 </a>
-
-                <!-- VEILLE -->
                 <a href="veille.html" class="px-4 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs sm:text-sm border border-slate-700/80 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:border-blue-500/50">
                     VEILLE
                 </a>
             </div>
 
-            <!-- Liens d'ancres à droite -->
             <div class="hidden lg:flex items-center space-x-6 text-sm font-medium tracking-wide">
                 <a href="#profil" class="hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 inline-block">Profil</a>
                 <a href="#competences" class="hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 inline-block">Compétences</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5 inline-block">Contact</a>
             </div>
-
         </div>
     </nav>
 
-    <!-- En-tête (Hero Section) avec animations glissantes depuis la droite -->
+    <!-- En-tête (Hero Section) -->
     <header class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
-        <div class="text-center max-w-4xl overflow-hidden">
+        <div class="text-center max-w-5xl overflow-hidden">
             
             <div class="slide-right delay-1 inline-block mb-4 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-semibold tracking-wide">
                 Disponible pour échanger
@@ -114,13 +95,16 @@
                 23 ans | Support Clients chez <strong class="text-white hover:text-blue-400 transition-colors">Vidal France</strong>
             </p>
 
-            <div class="slide-right delay-4 flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="slide-right delay-4 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="#profil" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-slate-950 hover:bg-blue-50 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
                     Découvrir mon profil
                 </a>
-                <a href="projets.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white hover:bg-slate-800 border border-slate-700 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-blue-500/50">
-                    Voir mes projets
-                </a>
+                
+                <!-- BOUTON CV MODIFIÉ -->
+                <button onclick="openCvModal()" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600/20 text-blue-400 hover:bg-blue-600/30 border border-blue-500/50 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Mon CV
+                </button>
             </div>
 
         </div>
@@ -132,12 +116,12 @@
             <div class="glass-card p-8 rounded-3xl md:col-span-2 reveal hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
                 <h2 class="text-3xl font-bold text-white mb-4">À propos de moi</h2>
                 <p class="text-lg leading-relaxed text-slate-400">
-                    Passionné par l'informatique depuis toujours, j'allie mon attrait pour la technologie avec un esprit de compétition forgé par le sport. J'aime comprendre comment les choses fonctionnent, résoudre des problèmes complexes et accompagner les utilisateurs.
+                    Passionné par l'informatique, j'allie mon attrait pour la technologie avec un esprit de compétition forgé par le sport. Polyvalent, j'aime comprendre le matériel (assemblage PC), résoudre des problèmes logiciels et accompagner les utilisateurs au quotidien.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-2">
                     <span class="px-3 py-1 bg-slate-800/80 rounded-lg text-sm font-medium text-slate-300 border border-slate-700/50">Support IT</span>
+                    <span class="px-3 py-1 bg-slate-800/80 rounded-lg text-sm font-medium text-slate-300 border border-slate-700/50">Maintenance Informatique</span>
                     <span class="px-3 py-1 bg-slate-800/80 rounded-lg text-sm font-medium text-slate-300 border border-slate-700/50">Relation Client</span>
-                    <span class="px-3 py-1 bg-slate-800/80 rounded-lg text-sm font-medium text-slate-300 border border-slate-700/50">Résolution de problèmes</span>
                 </div>
             </div>
 
@@ -147,7 +131,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2">Alternance chez Vidal</h3>
                 <p class="text-slate-400 text-sm">
-                    Support Clients au sein de l'entreprise de référence dans l'information médicale. Une mission qui demande de la rigueur et une excellente maîtrise des outils numériques.
+                    Support Clients au sein de l'entreprise de référence dans l'information médicale. Une mission qui exige rigueur, pédagogie et maîtrise des outils numériques.
                 </p>
             </div>
 
@@ -163,11 +147,11 @@
 
             <div class="glass-card p-8 rounded-3xl md:col-span-2 reveal hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
                 <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Gaming & Tech</h3>
+                <h3 class="text-xl font-bold text-white mb-2">Voyages, Lecture & Tech</h3>
                 <p class="text-slate-400 text-sm">
-                    Mon intérêt pour l'informatique va au-delà du travail. Je passe une grande partie de mon temps libre sur les jeux vidéo, ce qui nourrit ma curiosité pour les nouvelles technologies et le matériel.
+                    Très curieux de nature, j'aime découvrir de nouvelles cultures (Italie, Allemagne, Égypte, Espagne). Sur mon temps libre, je suis également un grand lecteur de mangas et passionné par le développement personnel.
                 </p>
             </div>
         </div>
@@ -187,110 +171,14 @@
                     <h3 class="text-2xl font-bold text-white">BTS SIO (SISR)</h3>
                 </div>
                 <p class="text-slate-400 text-lg leading-relaxed mb-4">
-                    Actuellement en deuxième année de <strong>BTS SIO option SISR</strong> au lycée Jean Lurçat. 
+                    Actuellement en deuxième année de <strong>BTS SIO option SISR</strong> à <strong>l'école IEF2I (Vincennes)</strong>. 
                 </p>
                 <p class="text-slate-400">
-                    Cette formation m'a permis d'acquérir des bases solides en administration de systèmes et réseaux.
+                    Cette formation fait suite à mon Bac STMG (Option système d'information de gestion) et me permet d'acquérir des bases très solides en administration réseau.
                 </p>
             </div>
 
             <div class="glass-card p-8 rounded-3xl reveal hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center text-cyan-400">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Systèmes & Réseaux</h3>
-                </div>
-                <p class="text-slate-400 mb-6">
-                    Expertise technique autour de la virtualisation, du routage, de la sécurité réseau et de la supervision.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1.5 bg-slate-800/80 border border-slate-700/80 rounded-lg text-sm text-blue-300">Linux</span>
-                    <span class="px-3 py-1.5 bg-slate-800/80 border border-slate-700/80 rounded-lg text-sm text-blue-300">Windows Server</span>
-                    <span class="px-3 py-1.5 bg-slate-800/80 border border-slate-700/80 rounded-lg text-sm text-slate-300">VLAN & Routage</span>
-                </div>
-            </div>
-
-            <!-- Projet d'avenir -->
-            <div class="glass-card p-8 md:p-10 rounded-3xl md:col-span-2 reveal hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1">
-                <div class="flex items-center gap-2 mb-3 text-blue-400 font-bold text-xs tracking-widest uppercase">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    Projet d'avenir
-                </div>
-                <h3 class="text-3xl font-bold text-white mb-6">Mon parcours après le BTS</h3>
-                
-                <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-4xl">
-                    Après l'obtention de mon BTS SIO SISR, je souhaite poursuivre mes études en 
-                    <strong class="text-slate-200">Licence</strong> puis en <strong class="text-slate-200">Master</strong> 
-                    spécialisé dans la <strong class="text-slate-200">Cybersécurité</strong> ou l'<strong class="text-slate-200">Ingénierie Réseaux</strong>.
-                </p>
-
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 text-sm">
-                    <div class="px-5 py-3 bg-slate-900/90 border border-slate-700/80 rounded-xl text-slate-300 flex items-center gap-3 shadow-lg">
-                        <span class="text-lg">🎓</span> 
-                        <span class="font-medium">BTS SIO SISR <span class="text-slate-500 font-normal">— en cours</span></span>
-                    </div>
-                    
-                    <div class="hidden md:block text-slate-600">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </div>
-
-                    <div class="px-5 py-3 bg-slate-900/90 border border-slate-700/80 rounded-xl text-slate-300 flex items-center gap-3 shadow-lg">
-                        <span class="text-lg">🏛️</span> 
-                        <span class="font-medium">Licence Réseaux / Cybersécurité</span>
-                    </div>
-
-                    <div class="hidden md:block text-slate-600">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </div>
-
-                    <div class="px-5 py-3 bg-slate-900/90 border border-slate-700/80 rounded-xl text-slate-300 flex items-center gap-3 shadow-lg">
-                        <span class="text-lg">🛡️</span> 
-                        <span class="font-medium">Master Cybersécurité / Ingénierie Réseaux</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="py-24 px-6 reveal">
-        <div class="max-w-3xl mx-auto glass-card rounded-3xl p-12 text-center border-t border-white/10 hover:border-blue-500/40 transition-all duration-300">
-            <h2 class="text-4xl font-bold text-white mb-6">Prêt à échanger ?</h2>
-            <p class="text-slate-400 mb-8 text-lg">
-                Que ce soit pour discuter d'informatique, de sport, ou d'opportunités professionnelles, ma boîte de réception est toujours ouverte.
-            </p>
-            <a href="mailto:ton-email@exemple.com" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                M'envoyer un message
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-slate-500 text-sm border-t border-white/5 mt-12">
-        <p>&copy; 2026 Samy Jneid. Conçu avec passion.</p>
-    </footer>
-
-    <!-- Script pour l'animation au défilement -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 50; 
-                
-                reveals.forEach((reveal) => {
-                    const elementTop = reveal.getBoundingClientRect().top;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveal.classList.add('active');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll();
-        });
-    </script>
-</body>
-</html>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14
