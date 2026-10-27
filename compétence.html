@@ -10,13 +10,6 @@
             background: rgba(15, 23, 42, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        /* Petite animation au chargement des jauges */
-        @keyframes fillBar {
-            from { width: 0; }
-        }
-        .progress-bar {
-            animation: fillBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col">
@@ -72,114 +65,43 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- CARTE 1 : LINUX -->
-            <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
-                <!-- Icône -->
-                <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <div class="glass-card p-10 rounded-3xl flex flex-col items-center justify-center text-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                <div class="w-24 h-24 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-8">Linux</h3>
-                
-                <!-- JAUGE DE PROGRESSION (Modifie le style="width: 75%" et le texte 75%) -->
-                <div class="w-full relative mt-auto">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Maîtrise</span>
-                        <span class="text-sm font-bold text-white">75%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                        <div class="progress-bar bg-gradient-to-r from-emerald-600 to-teal-400 h-full rounded-full relative" style="width: 75%">
-                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-white tracking-wide">Linux</h3>
             </div>
 
             <!-- CARTE 2 : WINDOWS SERVER -->
-            <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
-                <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16M12 4v16"></path></svg>
+            <div class="glass-card p-10 rounded-3xl flex flex-col items-center justify-center text-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                <div class="w-24 h-24 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16M12 4v16"></path></svg>
                 </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-8">Windows Server</h3>
-                
-                <!-- JAUGE DE PROGRESSION -->
-                <div class="w-full relative mt-auto">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Maîtrise</span>
-                        <span class="text-sm font-bold text-white">85%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                        <div class="progress-bar bg-gradient-to-r from-emerald-600 to-teal-400 h-full rounded-full relative" style="width: 85%">
-                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-white tracking-wide">Windows Server</h3>
             </div>
 
             <!-- CARTE 3 : ACTIVE DIRECTORY -->
-            <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
-                <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <div class="glass-card p-10 rounded-3xl flex flex-col items-center justify-center text-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                <div class="w-24 h-24 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-8 text-center leading-tight">Active Directory</h3>
-                
-                <!-- JAUGE DE PROGRESSION -->
-                <div class="w-full relative mt-auto">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Maîtrise</span>
-                        <span class="text-sm font-bold text-white">90%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                        <div class="progress-bar bg-gradient-to-r from-emerald-600 to-teal-400 h-full rounded-full relative" style="width: 90%">
-                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-white tracking-wide leading-tight">Active Directory</h3>
             </div>
 
             <!-- CARTE 4 : VIRTUALISATION -->
-            <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
-                <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            <div class="glass-card p-10 rounded-3xl flex flex-col items-center justify-center text-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                <div class="w-24 h-24 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                 </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-8">Virtualisation</h3>
-                
-                <!-- JAUGE DE PROGRESSION -->
-                <div class="w-full relative mt-auto">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Maîtrise</span>
-                        <span class="text-sm font-bold text-white">80%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                        <div class="progress-bar bg-gradient-to-r from-emerald-600 to-teal-400 h-full rounded-full relative" style="width: 80%">
-                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-white tracking-wide">Virtualisation</h3>
             </div>
 
             <!-- CARTE 5 : TICKETING -->
-            <div class="glass-card p-8 rounded-3xl flex flex-col items-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
-                <div class="w-20 h-20 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
+            <div class="glass-card p-10 rounded-3xl flex flex-col items-center justify-center text-center hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 shadow-lg group">
+                <div class="w-24 h-24 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
                 </div>
-                
-                <h3 class="text-2xl font-bold text-white mb-8 text-center leading-tight">Support & Ticketing</h3>
-                
-                <!-- JAUGE DE PROGRESSION -->
-                <div class="w-full relative mt-auto">
-                    <div class="flex justify-between mb-2">
-                        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Maîtrise</span>
-                        <span class="text-sm font-bold text-white">95%</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 border border-slate-700 overflow-hidden">
-                        <div class="progress-bar bg-gradient-to-r from-emerald-600 to-teal-400 h-full rounded-full relative" style="width: 95%">
-                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-white tracking-wide leading-tight">Support & Ticketing</h3>
             </div>
 
         </div>
